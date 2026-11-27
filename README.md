@@ -17,40 +17,44 @@
 
 TraceIt is a digital content protection platform designed to help sports organizations and content creators identify potential unauthorized usage of their original media across online platforms.
 
-The platform uses perceptual image hashing (pHash) to identify visually similar images, even when they have undergone modifications such as resizing or cropping.
+The platform uses **perceptual image hashing (pHash)** to identify visually similar images, even when they have undergone modifications such as resizing or cropping.
 
-By combining image registration, image similarity detection, backend processing, and a centralized dashboard, TraceIt aims to make digital content monitoring more accessible and organized.
+Users can register multiple original images for monitoring. The backend automatically scans selected Reddit communities, processes images found in posts, and compares them against registered content. Potential matches are presented through a centralized dashboard with similarity scores and links to their source posts.
+
+By combining image registration, automated content monitoring, image similarity detection, and backend processing, TraceIt aims to make digital content monitoring more accessible and organized.
 
 ## Key Features
 
 ### 1. Content Registration
-- Upload original images for monitoring.
+- Upload multiple original images for monitoring.
 - Generate perceptual hashes for registered content.
-- Maintain information about uploaded content.
+- Maintain information about uploaded content for subsequent comparisons.
 
 ### 2. Perceptual Image Matching
 - Uses perceptual hashing (pHash) for image fingerprinting.
 - Compares image fingerprints using Hamming distance.
 - Identifies potentially similar images, including modified versions.
 
-### 3. Content Monitoring
-- Designed to identify potential unauthorized usage of registered sports media.
-- Includes backend functionality for processing and monitoring content.
-- Supports reviewing potential matches and their sources.
+### 3. Automated Reddit Monitoring
+- Automatically scans selected Reddit communities for images.
+- Processes collected images for comparison against registered content.
+- Identifies potential matches without requiring users to manually search through posts.
 
 ### 4. Detection Dashboard
 - Centralized interface for reviewing registered content.
-- Displays detected matches and associated information.
-- Helps organize potential copyright infringement findings.
+- Displays original images alongside potential matches.
+- Provides similarity scores to help evaluate detected matches.
+- Includes links to the corresponding Reddit posts for source verification.
 
 ## How It Works
 
-1. **Content Upload:** Users register their original media.
-2. **Hash Generation:** The system generates a perceptual hash for each image.
-3. **Image Processing:** Images collected for comparison are processed using the same hashing technique.
-4. **Similarity Comparison:** Hashes are compared using Hamming distance.
-5. **Match Identification:** Potentially similar images are identified.
-6. **Review:** Results can be examined through the platform.
+1. **Content Upload:** Users register their original images on the platform.
+2. **Hash Generation:** The system generates perceptual hashes (pHash) for registered images.
+3. **Automated Scanning:** The backend automatically scans selected Reddit communities and collects images from posts.
+4. **Image Processing:** Collected images are processed using the same perceptual hashing technique.
+5. **Similarity Comparison:** Generated hashes are compared using Hamming distance to identify visually similar images.
+6. **Match Identification:** Potential matches are identified and associated with similarity scores.
+7. **Review:** Results are displayed on the dashboard along with the original image and source Reddit post links.
 
 ## Tech Stack
 
@@ -79,9 +83,9 @@ The project is organized into separate frontend and backend repositories.
 
 TraceIt was developed during SusHacks 2026, where our team secured **5th place among 100+ participating teams**.
 
-The project involved working with image-processing techniques, backend development, external data sources, and deployment within a competitive hackathon environment.
+The project involved working with image-processing techniques, perceptual hashing, automated Reddit monitoring, backend development, external data sources, and deployment within a competitive hackathon environment.
 
-Following the hackathon, deployment challenges were addressed and the platform was subsequently deployed.
+Following the hackathon, the platform underwent further deployment work, with the frontend hosted on Vercel and the backend deployed on Render.
 
 ## Team Members
 
@@ -96,4 +100,4 @@ Developed collaboratively by:
 
 ---
 
-*TraceIt is a collaborative hackathon project exploring image-based approaches to digital content protection.*
+*TraceIt is a collaborative hackathon project exploring image-based approaches to digital content protection. Detected matches indicate potential similarities and should be reviewed before drawing conclusions about copyright infringement.*
